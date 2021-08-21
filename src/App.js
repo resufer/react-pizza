@@ -10,8 +10,8 @@ export default function App() {
   let dispatch = useDispatch();
 
   React.useEffect(() => {
-    axios.get('http://localhost:3000/db.json')
-      .then(resp => dispatch(setPizzas(resp.data.pizzas)))
+    axios.get('http://localhost:3003/pizzas')
+      .then(resp => dispatch(setPizzas(resp.data)))
   }, []);
 
   return (
